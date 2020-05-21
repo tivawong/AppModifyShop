@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AppModifyShop",
-    "slug": "AppModifyShop",
+    "name": "ModifyShop",
+    "slug": "ModifyShop",
     "platforms": [
       "ios",
       "android",
