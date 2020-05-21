@@ -11,7 +11,7 @@ import { Text,
 import flatListEngine from '../../Data/flatListEngine';
 
 import { CounterContext } from '../../store/CounterProvider';
-import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 
 class FlatListItem extends Component {
@@ -27,10 +27,10 @@ class FlatListItem extends Component {
                         </View>
                         
                         <TouchableOpacity 
-                            style={{flex:0.2,justifyContent:'center',marginLeft: 7}}
+                            style={{flex:0.2,justifyContent:'center'}}
                             onPress={()=>addFavorite(item,index)}
                         >
-                            <Feather name="heart" size={24} color="black" />
+                            <AntDesign name="heart" size={24} color="#151B54" />
                         </TouchableOpacity>
                         
                     </View>

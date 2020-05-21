@@ -21,8 +21,10 @@ const counterReducer = (state, action) => {
       };
     case "ADD_FAVORITE":
       const cloneState = [...state.favitemlist];
-      cloneState.push(action.payload);
-      //   console.log("cloneState", cloneState);
+      action.payload && cloneState.push(action.payload);
+        console.log("cloneState", cloneState);
+        console.log('action.payload', action.payload)
+
       return {
         ...state,
         favitemlist: cloneState,
@@ -44,9 +46,10 @@ export const CounterProvider = ({ children }) => {
     counterDispatch({ type: "SUB_COUNTER", payload }); // ส่ง type SUB_COUNTER และ payload เพื่อให้ conterReducer ไปใช้งานต่อ
   const addFavorite = (payload) => {
     if (payload) {
-    //   console.log("typeof payload", typeof(payload));
+      // console.log("typeof payload", typeof(payload));
+      console.log('payload', payload)
       let clonepayload = { ...payload };
-      favitemlist.push(clonepayload);
+      payload && favitemlist.push(clonepayload);
       console.log('=============================================')
       console.log("clonepayload.path", clonepayload.path);
       console.log("clonepayload", clonepayload);

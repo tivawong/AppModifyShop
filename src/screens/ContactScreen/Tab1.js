@@ -4,30 +4,23 @@ import { CounterContext } from '../../store/CounterProvider';
 
 const Tab1 = props => {
 
-    const { counter,favitemlist,itemlist, addCounter, addFavorite } = useContext(CounterContext)
+    const { counter,favitemlist,subCounter, addCounter, addFavorite } = useContext(CounterContext)
     
     console.log('favitemlist', favitemlist)
 
     return (
-        <View style={{flex:1}}>
-            <Text style={{fontSize: 20}}>{counter}</Text>
-            
-            <Button
-                onPress={()=> addCounter(1)}
-                title="Add"
-            />
-            <Button
-                onPress={()=> subCounter(1)}
-                title="Sub"
-            />
-
-            <Button 
-                onPress={()=> addFavorite(1)}
-                title="Add Fav"
-            />
-
-
-            
+        <View style={{flex:1, alignItems:'center',margin: 50}}>
+            <Text style={{fontSize: 50, color:'tomato'}}>{counter}</Text>
+            <View style={{marginTop:50}}>
+                <Button
+                    onPress={()=> addCounter(1)}
+                    title="Clap 👏"
+                />
+                <Button
+                    onPress={()=> subCounter(1)}
+                    title=" Don't Clap 👋"
+                />      
+            </View>      
         </View>
         
     )  

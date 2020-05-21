@@ -11,7 +11,7 @@ import ContextProvider from './store/providerComposer';
 
 const styles = StyleSheet.create({
     statusBar: {
-        backgroundColor: "red",
+        backgroundColor: "tomato",
         height: Constants.statusBarHeight,
     },
 });
